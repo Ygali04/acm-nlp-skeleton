@@ -9,7 +9,7 @@ class StartingNetwork(torch.nn.Module):
 
     def __init__(self):
         super().__init__()
-        self.fc1 = nn.Linear(sd.__len__(self.token2idx), 50) 
+        self.fc1 = nn.Linear(len(self.token2idx), 50) 
         self.fc2 = nn.Linear(50, 10)
         self.sigmoid = nn.Sigmoid()
 
