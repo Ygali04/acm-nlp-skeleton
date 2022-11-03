@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-
+import StartingDataset as sd
 
 class StartingNetwork(torch.nn.Module):
     """
@@ -9,7 +9,7 @@ class StartingNetwork(torch.nn.Module):
 
     def __init__(self):
         super().__init__()
-        self.fc1 = nn.Linear(12122002, 50) # What could that number mean!?!?!? Ask an officer to find out :)
+        self.fc1 = nn.Linear(sd.__len__(self.token2idx), 50) 
         self.fc2 = nn.Linear(50, 10)
         self.sigmoid = nn.Sigmoid()
 
